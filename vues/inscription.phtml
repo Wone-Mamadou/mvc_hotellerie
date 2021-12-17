@@ -1,0 +1,39 @@
+
+<?php ob_start(); ?>
+    <form action="" method="post">
+
+        <div class="mb-3">
+            <label for="nom" class="form-label">Nom :</label>
+            <input type="text" class="form-control"  placeholder="Entrer votre nom" name="nom">
+        </div>
+
+        <div class="mb-3">
+            <label for="prenom" class="form-label">Prenom :</label>
+            <input type="text" class="form-control"  placeholder="Entrer votre prenom" name="prenom">
+        </div>
+
+        <div class="mb-3">
+            <label for="tel" class="form-label">Tél :</label>
+            <input type="tel" class="form-control" placeholder="01 23 45 67 89" name="tel" >
+        </div>
+        <div class="mb-3 mt-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control"  placeholder="Enter email" name="email">
+        </div>
+        
+        <div class="mb-3">
+            <label for="" class="form-label">Date d'arrivée :</label>
+            <input type="date" class="form-control"  name="dateA">
+        </div>
+
+        <div class="mb-3">
+            <label for="" class="form-label">Date de départ:</label>
+            <input type="date" class="form-control"   name="dateD">
+        </div>
+        
+        <input type="submit"  class="btn btn-primary">
+    </form> 
+
+<?php $content = ob_get_clean();
+
+include "vues/template.phtml";

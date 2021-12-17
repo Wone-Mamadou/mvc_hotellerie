@@ -1,0 +1,37 @@
+<?php ob_start() ?>
+
+        <h1 class="bg-dark text-white text-center">Détail</h1>       
+
+        <div class="container mt-3">
+            
+            <div class="d-flex justify-content-around">
+                <div class="card" style="width:400px">
+                    <h2 class="text-center">Bon séjour</h2>
+
+                    <?php if ( isset($_GET['action']) && $_GET['action'] == "get"  ): ?>
+                        <img class="card-img-top" src="photo/image1.jpg" alt="image1" style="width:100%">
+                    <?php else : ?>
+                        <img class="card-img-top" src="photo/image3.jpg" alt="image1" style="width:100%">
+                    <?php endif; ?>
+
+                    <div class="card-body ">
+                        <h4 class="card-title">Prix : <?= $chambre->getPrix(); ?></h4>
+                        <h4 class="card-title">Numéro de chambre : <?= $chambre->getNumchambre(); ?></h4>
+                        <h4 class="card-title">Nbr de Personnes : <?= $chambre->getNbPers(); ?></h4>
+                        <h4 class="card-title">Nbr de lits : <?= $chambre->getNblits(); ?></h4>
+                        <h4 class="card-title">Description : <?= $chambre->getDescription(); ?></h4>
+                  
+                        
+                        
+                        <a href="?action=reservation&numChambre=<?= $_GET['numChambre'] ?>" class="btn btn-info  ">Réserver</a>
+                    </div>
+                    
+                </div>
+            </div>
+                
+            
+        </div>
+  
+<?php $content = ob_get_clean();
+
+    include "vues/template.phtml";
