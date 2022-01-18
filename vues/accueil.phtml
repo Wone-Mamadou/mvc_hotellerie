@@ -8,7 +8,12 @@
             <img class="card-img-top" src="photo/image1.jpg" alt="image1" style="width:100%">
 
             <div class="card-body text-center">
-                <a href="?action=get&numChambre=11" class="btn btn-primary text-center ">Détail</a>
+                <a href="?action=get&numChambre=11" class="btn btn-primary text-center d-block ">Détail</a><br>
+
+                <?php if ( isset($_SESSION['utilisateur']) && unserialize($_SESSION['utilisateur'])->getRole() == "admin"  ) : ?> 
+                <a href="?action=delete" class="btn btn-primary text-center d-block ">Modification</a><br>
+                <a href="?update=modifier" class="btn btn-primary text-center d-block ">Supprimer</a>
+                <?php endif; ?>
             </div>
         </div>
 
@@ -18,12 +23,11 @@
 
             <div class="card-body text-center">
             
-                <a href="?action=gets&numChambre=12" class="btn btn-primary text-center ">Détail</a>
+                <a href="?action=gets&numChambre=12" class="btn btn-primary text-center d-block">Détail</a><br>
             
                 <?php if ( isset($_SESSION['utilisateur']) && unserialize($_SESSION['utilisateur'])->getRole() == "admin"  ) : ?> 
-                <a href="?action=gets&numChambre=12" class="btn btn-primary text-center ">Détail</a>
-                <a href="?action=delete" class="btn btn-primary text-center ">Supprimer</a>
-                <a href="?update=modifier" class="btn btn-primary text-center ">Modifier</a>
+                <a href="?action=delete" class="btn btn-primary text-center d-block">Modification</a><br>
+                <a href="?update=modifier" class="btn btn-primary text-center d-block">Supprimer</a>
                 <?php endif; ?>
             
             </div>
