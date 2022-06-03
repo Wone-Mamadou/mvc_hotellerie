@@ -1,5 +1,6 @@
 
 <?php ob_start(); ?>
+<div class="container card mx-auto d-block" style="width: 30%;">
     <form action="" method="post">
         <input type="hidden" name="numChambre" value="<?= $_GET['numChambre']?? 0 ?>">
         <div class="mb-3">
@@ -28,8 +29,9 @@
             <input type="date" class="form-control"   name="dateD">
         </div>
         
-        <input type="submit"  class="btn btn-primary">
+        <input type="submit"  class="btn btn-primary mb-3">
     </form> 
+</div>
 
 <?php $content = ob_get_clean();
 

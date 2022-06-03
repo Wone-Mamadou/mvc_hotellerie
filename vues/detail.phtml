@@ -1,14 +1,14 @@
 <?php ob_start() ?>
 
-        <h1 class="bg-dark text-white text-center">Détail</h1>       
+        <h1 class="bg-dark text-white text-center my-5">Détail</h1>       
 
-        <div class="container mt-3">
+        <div class="container-fluid mt-3">
             
-            <div class="d-flex justify-content-around">
-                <div class="card" style="width:400px">
+            
+                <div class="card mx-auto d-block" style="width:50%">
                     <h2 class="text-center">Bon séjour</h2>
 
-                    <?php if ( isset($_GET['action']) && $_GET['action'] == "get"  ): ?>
+                    <?php if (isset($_GET['action']) && $_GET['action'] == "get"): ?>
                         <img class="card-img-top" src="photo/image1.jpg" alt="image1" style="width:100%">
                     <?php else : ?>
                         <img class="card-img-top" src="photo/image3.jpg" alt="image1" style="width:100%">
@@ -27,7 +27,7 @@
                     </div>
                     
                 </div>
-            </div>
+            
                 
             
         </div>

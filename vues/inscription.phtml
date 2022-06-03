@@ -1,16 +1,21 @@
 
 <?php ob_start(); ?>
+
+<div class="container card mx-auto d-block" style="width: 30%;">
     <form action="" method="post">
 
-        <div class="mb-3">
-            <label for="nom" class="form-label">Nom :</label>
-            <input type="text" class="form-control"  placeholder="Entrer votre nom" name="nom">
+        <div class="row">
+            <div class="mb-3 col-md-6">
+                <label for="nom" class="form-label">Nom :</label>
+                <input type="text" class="form-control"  placeholder="Entrer votre nom" name="nom">
+            </div>
+
+            <div class="mb-3 col-md-6">
+                <label for="prenom" class="form-label">Prenom :</label>
+                <input type="text" class="form-control"  placeholder="Entrer votre prenom" name="prenom">
+            </div>
         </div>
 
-        <div class="mb-3">
-            <label for="prenom" class="form-label">Prenom :</label>
-            <input type="text" class="form-control"  placeholder="Entrer votre prenom" name="prenom">
-        </div>
 
         <div class="mb-3">
             <label for="tel" class="form-label">Tél :</label>
@@ -20,7 +25,7 @@
             <label for="email" class="form-label">Email:</label>
             <input type="email" class="form-control"  placeholder="Enter email" name="email">
         </div>
-        
+
         <div class="mb-3">
             <label for="" class="form-label">Date d'arrivée :</label>
             <input type="date" class="form-control"  name="dateA">
@@ -30,9 +35,11 @@
             <label for="" class="form-label">Date de départ:</label>
             <input type="date" class="form-control"   name="dateD">
         </div>
-        
-        <input type="submit"  class="btn btn-primary">
+
+        <input type="submit"  class="btn btn-primary mb-3">
     </form> 
+</div>
+    
 
 <?php $content = ob_get_clean();
 

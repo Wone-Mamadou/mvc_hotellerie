@@ -1,0 +1,474 @@
+
+*{
+    box-sizing: border-box;
+}
+
+
+
+/************************************************************* tete de page ****************************************************/
+
+header
+{
+
+    height: 80vh;
+    background: url("../img/banniere/hotel.jpg") 50% 50%;
+    background-size: cover;
+    padding: 25px;
+}
+
+/************************************************************* menu de navigation **************************************************/
+
+nav
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    user-select: none;
+    background: white;
+    opacity: 0.85;
+    
+    
+}
+
+.menu
+{
+    display: flex;
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.menu ul
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li
+{
+    list-style: none;
+}
+
+.menu li a
+{
+    text-decoration: none;
+    color: #ef7647;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 1rem;
+    display: block;
+}
+
+.menu li a:hover
+{
+    color: #c06275;
+}
+
+.logo
+{
+    display: flex;
+    align-items: center;
+}
+
+.logo img
+{
+    height: 90px;
+}
+
+.barsButton
+{
+    position: absolute;
+    right: 6rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.barsButton .bar
+{
+    height: 3px;
+    width: 100%;
+    background: #ef7647;
+    border-radius: 10px;
+
+}
+
+
+
+/****************************************************************************** bannière **********************************************/
+
+.banniere h1
+{
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+    
+}
+
+.bouton
+{
+    text-align: center;
+    padding: 20px;
+
+}
+
+.btn
+{
+    cursor: pointer;
+    border: none;
+    padding: 13px;
+    background-color: #ef7647;
+    color: white;
+    border-radius: 10px;
+}
+
+.btn:hover
+{
+    background-color: #c06275;
+}
+
+/*********************************************************************** About *************************************************/
+
+
+h2
+{
+    text-align: center;
+    margin-top: 50px;
+}
+
+h2 a{
+    color: black;
+}
+
+h2 a:hover{
+    color: #c06275;
+    text-decoration: none;
+}
+
+.line
+{
+    height: 3px;
+    width: 7%;
+    border: none;
+    box-shadow: none;
+    background-color: #ef7647;
+}
+
+.main
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+}
+
+.text-container p
+{
+    
+    font-size: 20px;
+    text-align: justify;
+    margin: 0 60px;
+}
+
+.imag
+{
+
+    min-width: 390px;
+    height: 480px;
+    background:url("../img/galerie/profil.jpeg");
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+
+/******************************************************************************** menu *****************************************************/
+  
+h3
+{
+    color: #c06275;
+    text-decoration: underline;
+    padding-top: 5px;
+}  
+
+#special .card-container 
+{
+    width: 95%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+  
+#special .card-container .card 
+{
+    height: 35rem;
+    width: 25rem;
+    background: #fff;
+    padding: 1rem;
+    margin: 2rem;
+    text-align: center;
+    
+}
+  
+#special .card-container .card img 
+{
+    height: 50%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+  
+.plat 
+{
+    font-size: 20px;
+    text-align: justify;
+    padding: 10px 10px;
+}
+  
+.prix
+{
+    text-align: center;
+    font-size: 25px;
+    color: #ef7647;
+    border: solid 2px;
+}
+
+  
+
+/*********************************************************************** galerie *****************************************************/
+
+
+#demo
+{
+    width: 58%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    
+}
+
+.carousel-item img 
+{
+    width: 100%;
+    height: 70%;
+    
+}
+
+/********************************************************************** footer *****************************************************/
+
+footer
+{
+    bottom: 0px;
+    width: 100%;
+    background: #501823;
+    color: white;
+}
+
+.mainContent
+{
+     display: flex;
+     text-align: center;
+
+}
+
+.mainContent .box
+{
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+
+.box h2
+{
+    font-size: 1.225rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ef7647;
+}
+
+h2 .contact{
+    font-size: 1.225rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ef7647;
+}
+
+.box .content
+{
+    margin: 20px 0 0 0;
+}
+
+.fas
+{
+    color: #ef7647;
+}
+
+.btnForm
+{
+    text-align: center;
+    padding: 10px;
+}
+
+.btnForm button
+{
+    cursor: pointer;
+    border: none;
+    background-color: #ef7647;
+    color: white;
+    margin-left: 140px;
+}
+
+.btnForm button:hover
+{
+     color: #731a2c;
+}
+
+.separator
+{
+    height: 2px;
+    background-color: #ef7647;
+}
+
+.copyright
+{
+    color: #ef7647;
+    text-align: center;
+    padding-bottom: 3px;
+}
+
+/***************************************************** responsivité **************************************************/
+
+@media screen and (max-width: 768px) 
+{
+    /********* barre de navigation ***********/
+
+    .barsButton
+    {
+        display: flex;
+    }
+
+    .menu
+    {
+        display: none;
+        width: 100%;
+    }
+
+
+    nav
+    {
+        
+        flex-direction: column;
+        align-items: flex-start;
+
+        
+    }
+
+    .menu ul
+    {
+        width: 100%;
+        flex-direction: column;
+        
+    }
+
+    .menu li
+    {
+        text-align: center;
+    }
+
+    .menu li a
+    {
+        padding: .3rem 1rem;
+    }
+
+    .menu.active
+    {
+        display: flex;
+    }
+
+    .logo
+    {
+        padding-left: 5rem;
+    }
+
+    .banniere h1
+    {
+        
+        margin-top: 50px;
+        
+    }   
+        
+    /********** about  ************/
+
+    .container
+    {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+
+    .imag
+    {
+        height: 300px;
+        width: 100%;
+    }
+
+    .text-container p
+    {
+        margin-top: 30px;
+
+        
+    }  
+        
+    /********** footer **********/
+    .mainContent
+    {
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+
+}
+
+@media screen and (max-width: 1000px) 
+{
+
+    .container
+    {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    
+    
+    .imag
+    {
+        height: 300px;
+        width: 100%;
+    
+    }
+    
+    .text-container p
+    {
+        margin-top: 30px;
+    
+    } 
+}

@@ -1,5 +1,5 @@
 <?php ob_start(); ?>
-     <h2 class="text-center">Connexion</h2>
+    <!-- <h2 class="text-center">Connexion</h2>
     
      <form action="" method="post">
 
@@ -14,9 +14,72 @@
           </div>
 
           <input type="submit" class="btn btn-success mt-2">
-     </form>
+     </form> -->
 
-<?php 
+     <h1 class="text-center text-uppercase">Connexion</h1>
+    <div class="container card mx-auto d-block" style="width: 30%;">
+        <form action="" method="post">
+            <!-- login input -->
+            <div class="form-outline mb-4 mt-4">
+                <label class="form-label" for="form2Example1">Login :</label>
+                <input type="text" id="form2Example1" class="form-control" name="login" value="pseudo"/>
+              
+            </div>
+          
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form2Example2">Mot de Passe :</label>
+                <input type="password" id="form2Example2" class="form-control" name="mdp" />
+              
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary  mb-3"> Connexion</button>
+            </div>
+           
+          
+            <!-- 2 column grid layout for inline styling -->
+            <div class="row mb-4">
+              <div class="col d-flex justify-content-center">
+                <!-- Checkbox -->
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+                  <label class="form-check-label" for="form2Example31"> Se souvenir de moi </label>
+                </div>
+              </div>
+          
+              <div class="col">
+                <!-- Simple link -->
+                <a href="#">Mot de passe oublié?</a>
+              </div>
+            </div>
+          
+          
+            <!-- Register buttons -->
+            <div class="text-center">
+              <p>Si vous n'avez pas un compte:? <a href="#!"> S'inscrire</a></p>
+              <p>Vous pouvez vous connecter avec:</p>
+              <button type="button" class="btn btn-link btn-floating mx-1 mb-3">
+                <i class="fab fa-facebook-f text-primary" ></i>
+              </button>
+          
+              <button type="button" class="btn btn-link btn-floating mx-1 mb-3">
+                <i class="fab fa-google text-danger" ></i>
+              </button>
+          
+              <button type="button" class="btn btn-link btn-floating mx-1 mb-3">
+                <i class="fab fa-twitter text-primary"></i>
+              </button>
+          
+              <button type="button" class="btn btn-link btn-floating mx-1 mb-3">
+                <i class="fab fa-github text-dark"></i>
+              </button>
+            </div>
+          </form>
+        
+    </div>
+
+<?php
 
 $content = ob_get_clean();
 

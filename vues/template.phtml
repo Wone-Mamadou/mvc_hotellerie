@@ -4,17 +4,18 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
-     <link rel="stylesheet" href="css/style.css">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+     <link rel="stylesheet" href="CSS/toto.css">
      <title>Hotel</title>
 </head> 
 
 <body>
     <header >
 
-        <div class="bg-dark p-5 mb-5 text-white border border-0 border-bottom">
+       <!-- <div class="bg-dark p-5 mb-5 text-white border border-0 border-bottom">
             <nav>
                 <a href="." class="text-white"><h1 class="text-center fs-1 fw-bold">Bienvenue sur notre site</h1></a>
             </nav>
@@ -35,25 +36,53 @@
                     </div>
                 <?php endif; ?>    
             </nav>
-        </div>
-       
-        
-        <div id="all_slider">
-            <ul id="slider">
-                <li class="slide"><img src="photo/image1.jpg"></li>
-                <li class="slide"><img src="photo/image2.jpg"></li>
-                <li class="slide"><img src="photo/image3.jpg"></li>
-                <li class="slide"><img src="photo/image2.jpg"></li>
-                <li class="slide"><img src="photo/image3.jpg"></li>
+
+
+        </div> -->
+
+        <nav>
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo du site">
+            </div>
+                <a href="" class="barsButton">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+
+                </a>
+            <div class="menu">
+                <ul>
+                    <li><a href=".">HOME</a></li>
+                    <li><a href="">GALERIE</a></li>
+                    <li><a href="">À PROPOS</a></li>
+                    <?php if (empty($_SESSION['utilisateur'])) : ?>
+                    <li><a href="?action=connexion">CONNEXION</a></li>
+                    <li><a href="?action=inscription">INSCRIPTION</a></li>
+                    <?php else: ?>
+                        <?php if (unserialize($_SESSION['utilisateur'])->getRole() == "admin") : ?>
+                    <li><a href="?action=listeResrvation">RÉSERVATION</a></li>
+                    <li><a href="?action=ajouter">AJOUTER</a></li>
+                        <?php endif; ?>
+                    <li >
+                    <a href="?action=deconnexion">DÉCONNEXION</a>  
+                    </li>
+                    <?php endif; ?> 
                 
-            </ul>
+                </ul>  
+            
+            </div>
+        </nav>
+        <div class="banniere">
+            <h1>BIENVENUE À L'HOTEL TÉRANGA</h1>
+
         </div>
+        <div class="bouton">
+            <a href="?action=reservation&numChambre=<?= $_GET['numChambre'] ?? "" ?>" class="btn btn-info  text-uppercase">Réservation</a>
+        </div>
+      
         
-        <div id="titre">
-            <h3 class="fs-1 text-capitalize fw-bold">Apprendre à créer des sites web <br> en toute simplicité !</h3>
-            <button type="button" name="button" class="btn-s">Nos services</button>
-            <button type="button" name="button" class="btn-c">Contactez-nous</button>
-        </div>
+     
+            
     </header>
     
     <?php if (isset($_SESSION['message'])): ?>
@@ -64,10 +93,67 @@
     <main class="container-fluid mt-3 mb-5">
         <?= $content ?? "page vide" ?>
     </main>
-    <footer class="bg-dark py-5  mb-0 mt-2">
-        <div class="container">
-            <p class="m-0 text-center text-white fs-1"> &copy; 2020 - 2021 - Hotel - M Wone <?= date("d/m/Y") ?></p>
+    <footer class=" py-5  mb-0 mt-2">
+    
+    <div class="mainContent">
+        <div class="left box">
+            <h2>Address</h2>
+            
+            <div class="content">
+                
+                <span class="fas fa-map-marker-alt"></span>
+                <span class="text">6 Rue Léopold Robert, 75014 Paris</span>
+            </div>
+            <div>
+                <span class="fas fa-phone-alt"></span>
+                <span class="text">+089-765432100</span>
+            </div>
+            <div>
+                <span class="fas fa-envelope"></span>
+                <span class="text">hotel@teranga.com</span>
+            </div>
         </div>
+    
+        <div class="center box">
+            <h2><div class="contact"> Contact </div></h2>
+    
+            <div class="content">
+              <form action="#">
+                <div>
+                    <div class="text">Email *</div>
+                    <input type="email" required>
+                </div>
+                <div>
+                  <div class="text">Message *</div>
+                  <textarea id="msgForm" rows="2" cols="25" required></textarea>
+                </div>
+                
+                <div class="btnForm">
+                    <button type="submit">Envoyer</button>
+                </div>
+            </div> 
+        </div>
+  
+        <div class="right box">
+            <h2>Horaires</h2>
+    
+            <div class="content">
+                <p class="horaires">
+                    Lun-Mar-Mer-Jeu-Ven <br>
+                    10h-15h | 18h-22h <br>
+                    Sam - Dim <br> 
+                    Fermé
+                </p>
+            </div>
+        </div>  
+    </div>
+
+    <hr class="separator">
+    <div class="copyright">
+        <p>&copy; 2020 Copyright Holder All Rights Reserved / 2020 - 2021 - Hotel - M Wone <?= date("d/m/Y") ?>.</p>
+    </div>
+
+       
     </footer>
     <?php unset($_SESSION['message']); ?>
 </body> 
